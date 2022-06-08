@@ -21,6 +21,7 @@ public abstract class Coleccionable : MonoBehaviour
             destruyendo = true;
             Recoger();
             animador.SetTrigger("estaDestruyendo");
+            GetComponent<AudioSource>().Play();
             Destroy(gameObject, 0.3f);
         }
     }

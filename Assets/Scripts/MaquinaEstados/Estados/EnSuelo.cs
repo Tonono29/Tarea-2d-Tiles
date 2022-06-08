@@ -5,7 +5,7 @@ public class EnSuelo : Estado
     public EnSuelo(Jugador jugador, MaquinaEstados maquinaEstados) : base(jugador, maquinaEstados)
     {
     }
-    
+
     public override void ActualizarLogica()
     {
         base.ActualizarLogica();
