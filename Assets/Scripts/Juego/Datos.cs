@@ -109,7 +109,7 @@ public class Datos : MonoBehaviour
     public void SumarVida()
     {
         vidas++;
-        OnVidasActualizadas?.Invoke(vidas);
+        OnVidasActualizadas?.Invoke(vidas,false);
     }
 
     public void DecrementarGemas()
