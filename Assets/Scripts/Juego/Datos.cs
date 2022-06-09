@@ -34,7 +34,10 @@ public class Datos : MonoBehaviour
         Instancia = this;
     }
     #endregion
-
+    private void Start()
+    {
+        EstablecerValores();
+    }
     public void ReiniciarValores()
     {
         EstablecerTiempoInicio();
