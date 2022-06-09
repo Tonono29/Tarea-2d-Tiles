@@ -29,6 +29,7 @@ public abstract class Enemigo : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        Debug.Log("Colision "+other);
         if (other.gameObject.CompareTag("Player") && !destruyendo)
         {
             var centro = transform.position;
@@ -47,7 +48,7 @@ public abstract class Enemigo : MonoBehaviour
             }
             else
             {
-                Datos.Instancia.QuitarVida();
+                Datos.Instancia.DecrementarVidas();
             }
         }
     }

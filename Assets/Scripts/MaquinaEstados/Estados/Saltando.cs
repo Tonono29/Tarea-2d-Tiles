@@ -11,6 +11,7 @@ public class Saltando : Estado
         base.Entrar();
         jugador.Saltar();
         jugador.SetParametroLogico("estaSaltando", true);
+        Audio.Instancia.PlaySalto();
     }
 
     public override void ActualizarLogica()
@@ -33,7 +34,14 @@ public class Saltando : Estado
     public override void ActualizarFisica()
     {
         base.ActualizarFisica();
-        jugador.Mover(new Vector2(movimiento.x * jugador.Velocidad, jugador.VelocidadActual.y));
+        if (movimiento.x != 0)
+        {
+            jugador.Mover(new Vector2(movimiento.x * jugador.Velocidad, jugador.VelocidadActual.y));
+        }
+        else
+        {
+            jugador.Mover(jugador.VelocidadActual);
+        }
     }
 
     public override void Salir()

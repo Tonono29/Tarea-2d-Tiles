@@ -11,7 +11,7 @@ public class Jugador : MonoBehaviour
 {
     [SerializeField] private float velocidad = 5.0f;
     public float Velocidad => velocidad;
-    [SerializeField] private float fuerzaSalto = 5.0f;
+    [SerializeField] private float fuerzaSalto = 7.0f;
     private Rigidbody2D cuerpo;
     private SpriteRenderer figura;
     private Animator animador;
@@ -26,6 +26,7 @@ public class Jugador : MonoBehaviour
     private LayerMask capaEscalera;
     private Collider2D sueloActual;
     public Vector2 VelocidadActual => cuerpo.velocity;
+
     private MaquinaEstados maquinaEstados;
     public Estado parado;
     public Estado coriendo;
@@ -161,5 +162,10 @@ public class Jugador : MonoBehaviour
             estaEnEscalera = false;
             escaleraActual = null;
         }
+        if (other.gameObject.CompareTag("Nivel"))
+        {
+           Datos.Instancia.DecrementarVidas();
+        }
     }
+
 }

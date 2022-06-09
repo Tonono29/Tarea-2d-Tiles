@@ -49,9 +49,9 @@ public class UIManager : MonoBehaviour
     }
     private void Start()
     {
-        Datos.Instancia.OntiempoActualizado += ActualizarTiempo;
-        Datos.Instancia.Onsumarpuntos += ActualizarPuntos;
-        Datos.Instancia.OnquitarVida += ActualizarVidas;
-        Datos.Instancia.OnrecogerGema += ActualizarGemas;
+        //Datos.Instancia.OntiempoActualizado += ActualizarTiempo;
+        //Datos.Instancia.Onsumarpuntos += ActualizarPuntos;
+        //Datos.Instancia.OnquitarVida += ActualizarVidas;
+        //Datos.Instancia.OnrecogerGema += ActualizarGemas;
     }
 }

@@ -6,6 +6,6 @@ public class Gema : Coleccionable
 {
     protected override void Recoger()
     {
-        Datos.Instancia.RecogerGema();
+        Datos.Instancia.DecrementarGemas();
     }
 }
